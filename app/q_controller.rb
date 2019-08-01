@@ -3,6 +3,11 @@ class QController < R00lz::Controller
     request.inspect + params.inspect
   end
 
+  def fq
+    @q = FileModel.find(params["q"] || 1)
+    render :quote
+  end
+
   def shakes
     @noun = :winking
     render(:shakes)
