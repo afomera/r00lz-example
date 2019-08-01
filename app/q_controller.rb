@@ -1,5 +1,14 @@
 class QController < R00lz::Controller
   def a_quote
-    "What's up, well?"
+    request.inspect + params.inspect
+  end
+
+  def shakes
+    @noun = :winking
+    render(:shakes)
+  end
+
+  def foobar
+    render('foobar')
   end
 end
