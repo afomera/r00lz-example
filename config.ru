@@ -1,4 +1,4 @@
-require_relative 'config/app'
-require_relative "app/q_controller"
+require_relative "config/app"
+$LOAD_PATH << "#{__dir__}/app"
 
 run Quotes::App.new
